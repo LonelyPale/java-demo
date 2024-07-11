@@ -1,7 +1,7 @@
 package my.demo.struct.modelmapper;
 
-import my.demo.struct.User;
-import my.demo.struct.UserDto;
+import my.demo.struct.model.User;
+import my.demo.struct.model.UserDto;
 import org.modelmapper.ModelMapper;
 
 import java.time.Duration;
@@ -26,6 +26,7 @@ public class ModelMapperDemo {
 
         Duration duration = Duration.between(start, Instant.now());
         System.out.println("ModelMapperDemo 运行时间: " + duration.toMillis() + " 毫秒");
+        System.out.println("ModelMapperDemo 运行时间: " + duration.toNanos() + " 纳秒");
         System.out.println("po:  " + po);
         System.out.println("dto: " + dto);
         System.out.println("===== ===== ===== ===== =====");

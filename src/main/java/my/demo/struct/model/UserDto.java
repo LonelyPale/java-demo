@@ -1,4 +1,4 @@
-package my.demo.struct;
+package my.demo.struct.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

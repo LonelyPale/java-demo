@@ -1,7 +1,7 @@
 package my.demo.struct.mapstruct;
 
-import my.demo.struct.User;
-import my.demo.struct.UserDto;
+import my.demo.struct.model.User;
+import my.demo.struct.model.UserDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
