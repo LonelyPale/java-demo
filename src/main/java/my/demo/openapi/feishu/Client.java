@@ -79,7 +79,11 @@ public class Client {
                 .content(content)
                 .uuid(UUID.randomUUID().toString())
                 .build();
-        CreateMessageReq req = CreateMessageReq.newBuilder().receiveIdType(CreateMessageReceiveIdTypeEnum.UNION_ID).createMessageReqBody(reqBody).build();
+        CreateMessageReq req = CreateMessageReq.newBuilder()
+                //.receiveIdType(CreateMessageReceiveIdTypeEnum.UNION_ID)
+                .receiveIdType(CreateMessageReceiveIdTypeEnum.EMAIL)
+                .createMessageReqBody(reqBody)
+                .build();
         CreateMessageResp resp = client.im().message().create(req);
         if (!resp.success()) {
             String msg = String.format("[feishu.Client.message] code: %s, msg: %s, reqId: %s", resp.getCode(), resp.getMsg(), resp.getRequestId());

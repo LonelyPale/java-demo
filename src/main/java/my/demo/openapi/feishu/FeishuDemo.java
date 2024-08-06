@@ -20,8 +20,8 @@ public class FeishuDemo {
         //FeishuClientUtil __ = new FeishuClientUtil(config);
         client = Client.newBuilder(appId, appSecret).debug(true).build();
 
-        //messages();
-        batchGetId();
+        messages();
+        //batchGetId();
     }
 
     public static void messages() throws Exception {
@@ -29,7 +29,8 @@ public class FeishuDemo {
         //System.out.println(resp);
         //TenantAccessTokenInternal resp1 = client.tenantAccessToken();
         //System.out.println(resp1);
-        client.messages("on_3f96d5bd08d5e1696461dbcf002b96b9", "text", "{\"text\":\"test content 6 \\n [一个文档](https://www.baidu.com/)\"}");
+        //client.messages("on_3f96d5bd08d5e1696461dbcf002b96b9", "text", "{\"text\":\"union_id: test content 6 \\n [一个文档](https://www.baidu.com/)\"}");
+        client.messages("test@email.com", "text", "{\"text\":\"email: test content 6 \\n [一个文档](https://www.baidu.com/)\"}");
         String uuid = UUID.randomUUID().toString();
         System.out.println(uuid);
     }
@@ -39,4 +40,3 @@ public class FeishuDemo {
         System.out.println(resp);
     }
 }
-
