@@ -81,7 +81,8 @@ public class Client {
                 .build();
         CreateMessageReq req = CreateMessageReq.newBuilder()
                 //.receiveIdType(CreateMessageReceiveIdTypeEnum.UNION_ID)
-                .receiveIdType(CreateMessageReceiveIdTypeEnum.EMAIL)
+                //.receiveIdType(CreateMessageReceiveIdTypeEnum.EMAIL)
+                .receiveIdType(CreateMessageReceiveIdTypeEnum.USER_ID)
                 .createMessageReqBody(reqBody)
                 .build();
         CreateMessageResp resp = client.im().message().create(req);
@@ -99,7 +100,7 @@ public class Client {
                 .includeResigned(true)
                 .build();
         BatchGetIdUserReq req = BatchGetIdUserReq.newBuilder()
-                .userIdType(BatchGetIdUserUserIdTypeEnum.OPEN_ID)
+                .userIdType(BatchGetIdUserUserIdTypeEnum.USER_ID)
                 .batchGetIdUserReqBody(reqBody)
                 .build();
         BatchGetIdUserResp resp = client.contact().user().batchGetId(req);
